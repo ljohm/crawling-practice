@@ -12,7 +12,7 @@ res.raise_for_status() #응답이 OK로 오지않을 경우 에러발생
 soup = BeautifulSoup(res.text, "html.parser") #응답으로 온 문서를 읽을 수 있게 parsing. (parsing 대상, parser 종류)
 # parser 종류
 # 1. lxml: c로 만들어져서 속도 빠름(별도 설치 필요) v
-# 2. html4lib: 파이썬으로 만들어졌고 lxml보다는 느림ㄴ딛ㅊ
+# 2. html4lib: 파이썬으로 만들어졌고 lxml보다는 느림
 # 3. html.parser: 파이썬 버전을 확인하여 사용 v
 
 per_value = soup.select("#wrapper > div.fund.fl_le > table > tbody > tr:nth-child(1) > td:nth-child(2)") #bs4의 select()를 이용해서 HTML 구문을 가져옴. select(선택자)
